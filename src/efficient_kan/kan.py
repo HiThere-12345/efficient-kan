@@ -2,7 +2,6 @@ import torch
 import torch.nn.functional as F
 import math
 
-
 class KANLinear(torch.nn.Module):
     def __init__(
         self,
@@ -13,7 +12,7 @@ class KANLinear(torch.nn.Module):
         scale_noise=0.1,
         scale_base=1.0,
         scale_spline=1.0,
-        enable_standalone_scale_spline=True,
+        enable_standalone_scale_spline=False,
         base_activation=torch.nn.SiLU,
         grid_eps=0.02,
         grid_range=[-1, 1],
